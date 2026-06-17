@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Presentation Slide</title>
+    <style>
+        /* Global Reset & Base Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial Black', 'Arial', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Slide Container */
+        .slide {
+            width: 100%;
+            max-width: 1200px;
+            height: 675px; /* standard 16:9 aspect ratio */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* --- GEOMETRIC BACKGROUND SHAPES (CSS Only) --- */
+        .decorations {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        /* Shared Shape Properties */
+        .semi-dark { background-color: #2b2662; }
+        .semi-light { background-color: #17a2b8; }
+
+        /* Left Decoration Group */
+        .left-decor {
+            position: absolute;
+            bottom: -50px;
+            left: -30px;
+            display: grid;
+            grid-template-columns: repeat(2, 110px);
+            grid-template-rows: repeat(4, 110px);
+            gap: 0;
+        }
+        .ld-1 { border-radius: 110px 110px 0 0; }
+        .ld-2 { border-radius: 0 0 110px 110px; transform: rotate(90deg); }
+        .ld-3 { border-radius: 0 0 110px 110px; transform: rotate(-90deg); }
+        .ld-4 { border-radius: 0 0 110px 110px; }
+        .ld-5 { border-radius: 110px 110px 0 0; }
+        .ld-6 { border-radius: 110px 110px 0 0; transform: rotate(90deg); }
+
+        /* Right Decoration Group */
+        .right-decor {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            display: grid;
+            grid-template-columns: repeat(2, 110px);
+            grid-template-rows: repeat(3, 110px);
+            gap: 0;
+        }
+        .rd-1 { border-radius: 0 0 110px 110px; transform: rotate(90deg); }
+        .rd-2 { border-radius: 110px 110px 0 0; }
+        .rd-3 { border-radius: 0 0 110px 110px; }
+        .rd-4 { border-radius: 0 0 110px 110px; transform: rotate(-90deg); }
+        .rd-5 { border-radius: 0 0 110px 110px; transform: rotate(90deg); }
+        .rd-6 { border-radius: 110px 110px 0 0; }
+
+        /* --- TYPOGRAPHY STYLING --- */
+        .title-container {
+            margin-bottom: 40px;
+            z-index: 2;
+        }
+
+        h1 {
+            color: #1e2a3a;
+            font-size: 4.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 0.95;
+            font-weight: 900;
+        }
+
+        .team-container {
+            font-family: 'Georgia', serif;
+            color: #2b2b2b;
+            z-index: 2;
+            margin-left: 15%; /* Aligns it slightly to the right like the original */
+        }
+
+        .presented-by {
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: #1e2a3a;
+        }
+
+        .team-members {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .batch {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1e2a3a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        
+        <div class="decorations">
+            <div class="left-decor">
+                <div class="semi-dark ld-1"></div><div></div>
+                <div class="semi-light ld-2"></div><div class="semi-dark ld-3"></div>
+                <div class="semi-dark ld-4"></div><div class="semi-light ld-5"></div>
+                <div class="semi-dark ld-6"></div><div></div>
+            </div>
+            
+            <div class="right-decor">
+                <div></div><div class="semi-dark rd-1"></div>
+                <div class="semi-light rd-2"></div><div class="semi-dark rd-3"></div>
+                <div class="semi-light rd-4"></div><div class="semi-dark rd-5"></div>
+            </div>
+        </div>
+
+        <div class="title-container">
+            <h1>Project<br>Presentation</h1>
+        </div>
+
+        <div class="team-container">
+            <p class="presented-by">Presented by our team</p>
+            <div class="team-members">
+                <p>G. VIJAYA DURGA</p>
+                <p>M. RUPA</p>
+                <p>K. PRASANNA KUMARI</p>
+                <p>K. NEHA KRUPA NATHANIEL</p>
+                <p>N. VARSHINI</p>
+                <p>M. DILLESWARI</p>
+            </div>
+            <p class="batch">From : Batch–2</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
