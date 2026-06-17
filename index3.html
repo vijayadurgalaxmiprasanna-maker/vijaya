@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Presentation Slide - Variant 2</title>
+    <style>
+        /* Global Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 16:9 Presentation Canvas Container */
+        .slide-canvas {
+            width: 1200px;
+            height: 675px;
+            background: #ffffff;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            overflow: hidden;
+        }
+
+        /* --- LEFT GEOMETRIC SIDEBAR --- */
+        .sidebar-decor {
+            background-color: #2b2662;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 0;
+            overflow: hidden;
+        }
+
+        /* Programmatic CSS Shapes */
+        .shape {
+            width: 160px;
+            height: 160px;
+            background-color: #17a2b8;
+            opacity: 0.8;
+            position: absolute;
+        }
+
+        .shape-top {
+            top: -40px;
+            left: -40px;
+            border-radius: 50%;
+            background-color: #17a2b8;
+        }
+
+        .shape-middle {
+            top: 45%;
+            right: -80px;
+            border-radius: 160px 0 0 160px;
+            background-color: #ffffff;
+            width: 160px;
+            height: 160px;
+        }
+
+        .shape-bottom {
+            bottom: -50px;
+            left: 30px;
+            width: 200px;
+            height: 100px;
+            border-radius: 0 0 200px 200px;
+            transform: rotate(-45deg);
+            background-color: #117a8b;
+        }
+
+        .batch-tag {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-left: 4px solid #17a2b8;
+            padding-left: 12px;
+            z-index: 5;
+        }
+
+        /* --- RIGHT MAIN CONTENT AREA --- */
+        .main-content {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #1e2a3a;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: -1px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 120px;
+            height: 6px;
+            background-color: #17a2b8;
+        }
+
+        /* Team Presenters Section */
+        .presenters-section {
+            width: 100%;
+        }
+
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        /* Clean 2-column layout for student names */
+        .names-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px 40px;
+            max-width: 700px;
+        }
+
+        .name-item {
+            font-size: 1.15rem;
+            color: #2b2662;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Small styled bullet prefix for names */
+        .name-item::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #17a2b8;
+            margin-right: 12px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div class="sidebar-decor">
+            <div class="shape shape-top"></div>
+            <div class="shape shape-middle"></div>
+            <div class="shape shape-bottom"></div>
+            
+            <div class="batch-tag">Batch – 2</div>
+        </div>
+
+        <div class="main-content">
+            <h1>Project<br>Presentation</h1>
+            
+            <div class="presenters-section">
+                <div class="section-title">Presented by our team</div>
+                
+                <div class="names-grid">
+                    <div class="name-item">G. VIJAYA DURGA</div>
+                    <div class="name-item">K. NEHA KRUPA NATHANIEL</div>
+                    <div class="name-item">M. RUPA</div>
+                    <div class="name-item">N. VARSHINI</div>
+                    <div class="name-item">K. PRASANNA KUMARI</div>
+                    <div class="name-item">M. DILLESWARI</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
